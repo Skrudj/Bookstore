@@ -29,5 +29,8 @@ public class Book {
     @Nonnull
     private BigDecimal price;
     private String description;
+    @Column(name = "cover_image")
     private String coverImage;
+    @Column(name = "is_deleted")
+    private boolean isDeleted;
 }
