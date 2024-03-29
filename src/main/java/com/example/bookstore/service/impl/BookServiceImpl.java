@@ -1,5 +1,6 @@
 package com.example.bookstore.service.impl;
 
+import com.example.bookstore.exeptions.EntityNotFoundException;
 import com.example.bookstore.model.Book;
 import com.example.bookstore.repository.BookRepository;
 import com.example.bookstore.service.BookService;
@@ -26,6 +27,16 @@ public class BookServiceImpl implements BookService {
     @Override
     public Optional<Book> findById(Long id) {
         return bookRepository.findById(id);
+    }
+
+    @Override
+    public void update(Long id, Book book) {
+        if (!bookRepository.existsById(id)) {
+            throw new EntityNotFoundException("Book by id: " + id + " not found");
+        }
+
+        book.setId(id);
+        bookRepository.save(book);
     }
 
     @Override

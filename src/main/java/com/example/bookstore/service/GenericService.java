@@ -10,5 +10,7 @@ public interface GenericService<T> {
 
     Optional<T> findById(Long id);
 
+    void update(Long id, T entity);
+
     void delete(Long id);
 }
