@@ -11,8 +11,8 @@ public enum BookParameters {
     AUTHOR("author"),
     DESCRIPTION("description"),
     PRICE("price"),
-    BOOK_LOWER_PRICE("lower_price"),
-    BOOK_UPPER_PRICE("upper_price");
+    BOOK_LOWER_PRICE("lowerPrice"),
+    BOOK_UPPER_PRICE("upperPrice");
 
     private final String key;
 }

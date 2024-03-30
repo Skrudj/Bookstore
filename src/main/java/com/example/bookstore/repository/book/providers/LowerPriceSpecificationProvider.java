@@ -3,6 +3,7 @@ package com.example.bookstore.repository.book.providers;
 import com.example.bookstore.model.Book;
 import com.example.bookstore.repository.SpecificationProvider;
 import com.example.bookstore.repository.book.BookParameters;
+import java.math.BigDecimal;
 import lombok.Getter;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
@@ -18,7 +19,7 @@ public class LowerPriceSpecificationProvider implements SpecificationProvider<Bo
             return (root, query, criteriaBuilder)
                     -> criteriaBuilder.greaterThanOrEqualTo(root.get(
                             BookParameters.PRICE.getKey()),
-                    params[0]
+                    BigDecimal.valueOf(Long.parseLong(params[0]))
             );
         }
 
