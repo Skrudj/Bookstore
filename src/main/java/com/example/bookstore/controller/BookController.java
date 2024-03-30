@@ -1,6 +1,7 @@
 package com.example.bookstore.controller;
 
 import com.example.bookstore.dto.request.BookRequestDto;
+import com.example.bookstore.dto.request.BookSearchParameters;
 import com.example.bookstore.dto.response.BookResponseDto;
 import com.example.bookstore.exeptions.EntityNotFoundException;
 import com.example.bookstore.mappper.BookMapper;
@@ -40,6 +41,15 @@ public class BookController {
         );
 
         return bookMapper.toDto(book);
+    }
+
+    @GetMapping("/search")
+    public List<BookResponseDto> search(@RequestBody BookSearchParameters params) {
+        return bookService
+                .search(params)
+                .stream()
+                .map(bookMapper::toDto)
+                .toList();
     }
 
     @PostMapping
