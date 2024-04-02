@@ -7,6 +7,7 @@ import com.example.bookstore.exeptions.EntityNotFoundException;
 import com.example.bookstore.mappper.BookMapper;
 import com.example.bookstore.model.Book;
 import com.example.bookstore.service.BookService;
+import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -53,7 +54,7 @@ public class BookController {
     }
 
     @PostMapping
-    public BookResponseDto save(@RequestBody BookRequestDto request) {
+    public BookResponseDto save(@RequestBody @Valid BookRequestDto request) {
         Book book = bookMapper.toModel(request);
         return bookMapper.toDto(bookService.add(book));
     }
