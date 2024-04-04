@@ -7,7 +7,6 @@ import lombok.Data;
 
 @Data
 public class BookRequestDto {
-    private Long id;
     @NotNull
     private String title;
     @NotNull
