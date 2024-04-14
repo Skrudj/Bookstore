@@ -3,7 +3,7 @@ package com.example.bookstore.controller;
 import com.example.bookstore.dto.request.BookRequestDto;
 import com.example.bookstore.dto.request.BookSearchParameters;
 import com.example.bookstore.dto.response.BookResponseDto;
-import com.example.bookstore.exeptions.EntityNotFoundException;
+import com.example.bookstore.exceptions.EntityNotFoundException;
 import com.example.bookstore.mappper.BookMapper;
 import com.example.bookstore.model.Book;
 import com.example.bookstore.service.BookService;
