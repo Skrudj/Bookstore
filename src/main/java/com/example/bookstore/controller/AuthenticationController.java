@@ -14,7 +14,8 @@ public class AuthenticationController {
     private final UserMapper userMapper;
 
     @GetMapping("/register")
-    public UserResponseDto register(UserRegistrationRequestDto request) throws RegistrationException {
+    public UserResponseDto register(UserRegistrationRequestDto request)
+            throws RegistrationException {
         return new UserResponseDto();
     }
 

@@ -25,7 +25,8 @@ public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Obje
             Object firstField = BeanUtils.getProperty(o, firstFieldName);
             Object secondField = BeanUtils.getProperty(o, secondFieldName);
 
-            valid = firstField == null && secondField == null || firstField != null && firstField.equals(secondField);
+            valid = firstField == null && secondField == null
+                    || firstField != null && firstField.equals(secondField);
         } catch (Exception e) {
             throw new RuntimeException("Can't access fields of object: " + o.toString(), e);
         }
