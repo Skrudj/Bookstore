@@ -1,6 +1,6 @@
 package com.example.bookstore.dto.request;
 
-import com.example.bookstore.exeptions.annotations.FieldMatch;
+import com.example.bookstore.exceptions.annotations.FieldMatch;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 

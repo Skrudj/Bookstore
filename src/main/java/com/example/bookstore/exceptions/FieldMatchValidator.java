@@ -1,9 +1,8 @@
-package com.example.bookstore.exeptions;
+package com.example.bookstore.exceptions;
 
-import com.example.bookstore.exeptions.annotations.FieldMatch;
+import com.example.bookstore.exceptions.annotations.FieldMatch;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
-import java.lang.reflect.InvocationTargetException;
 import org.apache.commons.beanutils.BeanUtils;
 
 public class FieldMatchValidator implements ConstraintValidator<FieldMatch, Object> {

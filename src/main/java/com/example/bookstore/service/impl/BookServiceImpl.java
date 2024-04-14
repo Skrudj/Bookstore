@@ -1,7 +1,7 @@
 package com.example.bookstore.service.impl;
 
 import com.example.bookstore.dto.request.BookSearchParameters;
-import com.example.bookstore.exeptions.EntityNotFoundException;
+import com.example.bookstore.exceptions.EntityNotFoundException;
 import com.example.bookstore.model.Book;
 import com.example.bookstore.repository.book.BookRepository;
 import com.example.bookstore.repository.book.BookSpecificationBuilder;

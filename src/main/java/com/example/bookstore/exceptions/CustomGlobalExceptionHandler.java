@@ -1,4 +1,4 @@
-package com.example.bookstore.exeptions;
+package com.example.bookstore.exceptions;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;

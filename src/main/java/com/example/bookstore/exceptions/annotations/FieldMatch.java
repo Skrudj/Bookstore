@@ -1,10 +1,10 @@
-package com.example.bookstore.exeptions.annotations;
+package com.example.bookstore.exceptions.annotations;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.TYPE;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-import com.example.bookstore.exeptions.FieldMatchValidator;
+import com.example.bookstore.exceptions.FieldMatchValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 import java.lang.annotation.Retention;
